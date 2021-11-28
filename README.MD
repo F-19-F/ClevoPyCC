@@ -14,10 +14,13 @@ CG.SetFansAuto()
 print(CG.GetFanInfo(2))
 # you can call method in root\WMI namespace
 ```
+### dependents
+clevomof.dll that install automatically by control center
+
 ### Implement your method
 * open cmd
 * excute wbemtest
-* connect to "root\WMI" name space
+* connect to "root\WMI" name space (if erro happen , run CheckWMI.py)
 * open class "CLEVO_GET" or CLEVO_*
 * if no error,there are many items in methods ,choose one and call like clevo_wmi.py do
 
@@ -27,3 +30,4 @@ print(CG.GetFanInfo(2))
 * [PyMI](https://github.com/cloudbase/PyMI)
 * [tuxedo-control-center](https://github.com/tuxedocomputers/tuxedo-control-center)
 * [clevo-xsm-wmi](https://github.com/rafaelgieschke/clevo-xsm-wmi)
+* [LED-manager-for-Clevo](https://github.com/rzrwolf/LED-manager-for-Clevo.git)
