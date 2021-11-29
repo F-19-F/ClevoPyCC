@@ -1,14 +1,18 @@
 import winreg
 import ctypes
 import os
-
+import shutil
 
 def IsAdmin():
     return ctypes.windll.shell32.IsUserAnAdmin()
 
 
 def CheckDll():
-    return os.path.exists(r"C:\Windows\SysWOW64\clevomof.dll")
+    if os.path.exists(r"C:\Windows\SysWOW64\clevomof.dll"):
+        return True
+    else:
+        shutil.copyfile("./CLEVOMOF.dll",r"C:\Windows\SysWOW64\clevomof.dll")
+        return False
 
 
 def CheckReg():
@@ -29,7 +33,7 @@ if __name__ == '__main__':
         print("run as administrator!")
         exit(0)
     if not CheckDll():
-        print("No clevomof.dll found! install Control Center and you will get it")
+        print("No clevomof.dll found! copy one to system")
     if CheckReg():
         print("Try to restart")
     else:

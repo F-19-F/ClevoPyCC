@@ -15,8 +15,8 @@ print(CG.GetFanInfo(2))
 # you can call method in root\WMI namespace
 ```
 ### dependents
-clevomof.dll that install automatically by control center
-
+clevomof.dll that install automatically by control center V2.0
+run CheckWMI.py as administrator to check 
 ### Implement your method
 * open cmd
 * excute wbemtest
