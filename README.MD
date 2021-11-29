@@ -1,5 +1,6 @@
 # ClevoPyControlCenter
 ## A python API act as Control Center to control your Clevo Laptop via wmi on windows.
+**Only works on Control Center 2.0 models. Control Center 3.0 model use [acpi dsm](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/acpi-device-specific-methods) to control device,thus wmi will not work.**
 ### Usage
 ```python
 # pip3 install pymi
